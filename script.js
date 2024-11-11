@@ -24,6 +24,13 @@ function randomOf(array) {
 function onClick() {
   if(usedQuotes.length === QUOTES.length) {
     alert('No more quotes to show');
+
+    // Set the button to be disabled.
+    const button = document.querySelector('#button');
+    button.disabled = true;
+    button.innerHTML = 'Click me to get a famous quote (No more quotes to show)';
+    button.classList.add('disabled');
+    
     return;
   }
   
